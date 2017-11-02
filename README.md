@@ -95,3 +95,14 @@ Get contacts
     $contacts = $bexio->getContacts();
 ```
 
+Get positions for an invoice
+
+```php
+    $invoiceResource = new \Bexio\Resource\Invoice($client);
+    $positionResource = new \Bexio\Resource\Position($client);
+    
+    $invoices = $invoiceResource->getInvoices();   
+    // You must provide the object or the ID to [setInvoice|setOrder|setEstimate]
+    $positions = $positionResource->setInvoice($invoices[0])->getDefaultPositions();
+```
+
