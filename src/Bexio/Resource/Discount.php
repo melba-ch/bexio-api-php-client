@@ -28,7 +28,7 @@ class Discount extends Bexio {
      */
     public function searchDiscounts($resource, $parentId, array $params = [])
     {
-        return $this->client->get("$resource/$parentId/kb_position_discount", $params);
+        return $this->client->post("$resource/$parentId/kb_position_discount", $params);
     }
 
     /**
