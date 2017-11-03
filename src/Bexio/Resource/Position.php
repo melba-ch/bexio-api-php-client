@@ -83,7 +83,7 @@ class Position extends Bexio
      */
     public function getDefaultPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_custom', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_custom", $params);
     }
 
     /**
@@ -95,7 +95,7 @@ class Position extends Bexio
      */
     public function searchDefaultPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_custom/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_custom/search", $params);
     }
 
     /**
@@ -107,7 +107,7 @@ class Position extends Bexio
      */
     public function getDefaultPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_custom/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_custom/$id", []);
     }
 
     /**
@@ -119,7 +119,7 @@ class Position extends Bexio
      */
     public function createDefaultPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_custom', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_custom", $params);
     }
 
     /**
@@ -130,7 +130,7 @@ class Position extends Bexio
      */
     public function getItemPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_article', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_article", $params);
     }
 
     /**
@@ -142,7 +142,7 @@ class Position extends Bexio
      */
     public function searchItemPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_article/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_article/search", $params);
     }
 
     /**
@@ -154,7 +154,7 @@ class Position extends Bexio
      */
     public function getItemPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_article/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_article/$id", []);
     }
 
     /**
@@ -166,7 +166,7 @@ class Position extends Bexio
      */
     public function createItemPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_article', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_article", $params);
     }
 
     /**
@@ -177,7 +177,7 @@ class Position extends Bexio
      */
     public function getTextPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_text', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_text", $params);
     }
 
     /**
@@ -189,7 +189,7 @@ class Position extends Bexio
      */
     public function searchTextPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_text/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_text/search", $params);
     }
 
     /**
@@ -201,7 +201,7 @@ class Position extends Bexio
      */
     public function getTextPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_text/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_text/$id", []);
     }
 
     /**
@@ -213,7 +213,7 @@ class Position extends Bexio
      */
     public function createTextPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_text', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_text", $params);
     }
 
     /**
@@ -224,7 +224,7 @@ class Position extends Bexio
      */
     public function getSubPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_subposition', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_subposition", $params);
     }
 
     /**
@@ -236,7 +236,7 @@ class Position extends Bexio
      */
     public function searchSubPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_subposition/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_subposition/search", $params);
     }
 
     /**
@@ -248,7 +248,7 @@ class Position extends Bexio
      */
     public function getSubPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_subposition/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_subposition/$id", []);
     }
 
     /**
@@ -260,7 +260,7 @@ class Position extends Bexio
      */
     public function createSubPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_subposition', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_subposition", $params);
     }
 
     /**
@@ -271,7 +271,7 @@ class Position extends Bexio
      */
     public function getSubtotalPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_subtotal', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_subtotal", $params);
     }
 
     /**
@@ -283,7 +283,7 @@ class Position extends Bexio
      */
     public function searchSubtotalPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_subtotal/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_subtotal/search", $params);
     }
 
     /**
@@ -295,7 +295,7 @@ class Position extends Bexio
      */
     public function getSubtotalPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_subtotal/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_subtotal/$id", []);
     }
 
     /**
@@ -307,7 +307,7 @@ class Position extends Bexio
      */
     public function createSubtotalPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_subtotal', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_subtotal", $params);
     }
 
     /**
@@ -318,7 +318,7 @@ class Position extends Bexio
      */
     public function getPagebreakPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_pagebreak', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_pagebreak", $params);
     }
 
     /**
@@ -330,7 +330,7 @@ class Position extends Bexio
      */
     public function searchPagebreakPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_pagebreak/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_pagebreak/search", $params);
     }
 
     /**
@@ -342,7 +342,7 @@ class Position extends Bexio
      */
     public function getPagebreakPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_pagebreak/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_pagebreak/$id", []);
     }
 
     /**
@@ -354,7 +354,7 @@ class Position extends Bexio
      */
     public function createPagebreakPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_pagebreak', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_pagebreak", $params);
     }
 
     /**
@@ -365,7 +365,7 @@ class Position extends Bexio
      */
     public function getDiscountPositions(array $params = [])
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_discount', $params);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_discount", $params);
     }
 
     /**
@@ -377,7 +377,7 @@ class Position extends Bexio
      */
     public function searchDiscountPositions(array $params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_discount/search', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_discount/search", $params);
     }
 
     /**
@@ -389,7 +389,7 @@ class Position extends Bexio
      */
     public function getDiscountPosition($id)
     {
-        return $this->client->get($this->parentResource . '/' . $this->parentId . '/kb_position_discount/search/' . $id, []);
+        return $this->client->get("{$this->parentResource}/{$this->parentId}/kb_position_discount/$id", []);
     }
 
     /**
@@ -401,7 +401,7 @@ class Position extends Bexio
      */
     public function createDiscountPosition($params = [])
     {
-        return $this->client->post($this->parentResource . '/' . $this->parentId . '/kb_position_discount', $params);
+        return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_discount", $params);
     }
 
 }
