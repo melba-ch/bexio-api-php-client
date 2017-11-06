@@ -6,9 +6,12 @@ use Bexio\Bexio;
 
 class Order extends Bexio {
 
+    protected $orderId;
+
     /**
      * Gets all orders
      *
+     * @param array $params
      * @return array
      */
     public function getOrders(array $params = [])
@@ -47,6 +50,39 @@ class Order extends Bexio {
     public function createOrder($params = [])
     {
         return $this->client->post('kb_order', $params);
+    }
+
+    /**
+     * Set the desired orderId for the order scope
+     *
+     * @param \stdClass|integer $order
+     * @return $this
+     */
+    public function setOrderId($order)
+    {
+        if ($order instanceof \stdClass) {
+            $this->orderId = $order->id;
+            return $this;
+        }
+        $this->orderId = $order;
+        return $this;
+    }
+
+    /**
+     * Create a repetition an order
+     *
+     * @param array $params
+     * @param \stdClass|integer $order
+     * @return $this
+     */
+    public function createRepetition(array $params = [], $order = null)
+    {
+        if ($order instanceof \stdClass) {
+            $id = $order->id;
+        } else {
+            $id = $order ?: $this->orderId;
+        }
+        return $this->client->post("kb_order/$id/repetition", $params);
     }
 
 }
