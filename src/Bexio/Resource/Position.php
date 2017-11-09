@@ -19,7 +19,7 @@ class Position extends Bexio
     public function setOrder($order)
     {
         $this->setParentId($order);
-        $this->setParentResource('kb_offer');
+        $this->setParentResource('kb_order');
         return $this;
     }
 
@@ -64,7 +64,7 @@ class Position extends Bexio
     }
 
     /**
-     * Set de default resource. Can be kb_offer|kb_invoice|kb_estimate
+     * Set de default resource. Can be kb_order|kb_invoice|kb_estimate
      *
      * @param string $resource
      * @return $this
@@ -77,9 +77,10 @@ class Position extends Bexio
 
     /**
      * Gets all the default positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
+     * @param array $params
      * @return array
      */
     public function getDefaultPositions(array $params = [])
@@ -89,7 +90,7 @@ class Position extends Bexio
 
     /**
      * Search for default positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -102,7 +103,7 @@ class Position extends Bexio
 
     /**
      * Get specific default position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -115,7 +116,7 @@ class Position extends Bexio
 
     /**
      * Add new default position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -128,7 +129,7 @@ class Position extends Bexio
 
     /**
      * Gets all the item positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -140,7 +141,7 @@ class Position extends Bexio
 
     /**
      * Search for item positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -153,7 +154,7 @@ class Position extends Bexio
 
     /**
      * Get specific item position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -166,7 +167,7 @@ class Position extends Bexio
 
     /**
      * Add new item position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -179,7 +180,7 @@ class Position extends Bexio
 
     /**
      * Gets all the text positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -191,7 +192,7 @@ class Position extends Bexio
 
     /**
      * Search for text positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -204,7 +205,7 @@ class Position extends Bexio
 
     /**
      * Get specific text position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -217,7 +218,7 @@ class Position extends Bexio
 
     /**
      * Add new text position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -230,7 +231,7 @@ class Position extends Bexio
 
     /**
      * Gets all the sub positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -242,7 +243,7 @@ class Position extends Bexio
 
     /**
      * Search for sub positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -255,7 +256,7 @@ class Position extends Bexio
 
     /**
      * Get specific sub position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -268,7 +269,7 @@ class Position extends Bexio
 
     /**
      * Add new sub position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -281,7 +282,7 @@ class Position extends Bexio
 
     /**
      * Gets all the subtotal positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -293,7 +294,7 @@ class Position extends Bexio
 
     /**
      * Search for subtotal positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -306,7 +307,7 @@ class Position extends Bexio
 
     /**
      * Get specific subtotal position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -319,7 +320,7 @@ class Position extends Bexio
 
     /**
      * Add new subtotal position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -332,7 +333,7 @@ class Position extends Bexio
 
     /**
      * Gets all the pagebreak Positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -344,7 +345,7 @@ class Position extends Bexio
 
     /**
      * Search for pagebreak Positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -357,7 +358,7 @@ class Position extends Bexio
 
     /**
      * Get specific pagebreak Position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -370,7 +371,7 @@ class Position extends Bexio
 
     /**
      * Add new pagebreak Position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -383,7 +384,7 @@ class Position extends Bexio
 
     /**
      * Gets all the discount positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @return array
@@ -395,7 +396,7 @@ class Position extends Bexio
 
     /**
      * Search for discount positions
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
@@ -408,7 +409,7 @@ class Position extends Bexio
 
     /**
      * Get specific discount position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param $id
@@ -421,7 +422,7 @@ class Position extends Bexio
 
     /**
      * Add new discount position
-     * You first need to set the default resource kb_offer|kb_invoice|kb_estimate
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
      * Then the default parent with the id|object
      *
      * @param array $params
