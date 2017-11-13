@@ -61,4 +61,15 @@ class Invoice extends Bexio {
         return $this->client->post('kb_invoice', $params);
     }
 
+    /**
+     * Get specific invoice in PDF
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function getInvoicePdf($id)
+    {
+        return $this->client->get("kb_invoice/$id/pdf", []);
+    }
+
 }
