@@ -9,9 +9,10 @@ class Language extends Bexio {
     /**
      * Gets all languages
      *
+     * @param array $params
      * @return array
      */
-    public function getLanguages(array $params = ['lang' => 'fr-CH'])
+    public function getLanguages(array $params = [])
     {
         return $this->client->get('language', $params);
     }
@@ -19,6 +20,7 @@ class Language extends Bexio {
     /**
      * Search languages
      *
+     * @param array $params
      * @return array
      */
     public function searchLanguages(array $params = [])
