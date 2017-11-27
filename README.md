@@ -95,7 +95,7 @@ Get contacts
     $contacts = $bexio->getContacts();
 ```
 
-Get positions for an invoice
+Get positions or discounts for an invoice
 
 ```php
     $invoiceResource = new \Bexio\Resource\Invoice($client);
