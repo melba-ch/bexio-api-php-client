@@ -52,8 +52,20 @@ class Order extends Bexio {
         return $this->client->post('kb_order', $params);
     }
 
+
     /**
-     * Set the desired orderId for the order scope
+     * Set the desired order for the repetition scope
+     *
+     * @param \stdClass|integer $order
+     * @return $this
+     */
+    public function setOrder($order)
+    {
+        return $this->setOrderId($order);
+    }
+
+    /**
+     * Set the desired orderId for the repetition scope
      *
      * @param \stdClass|integer $order
      * @return $this
