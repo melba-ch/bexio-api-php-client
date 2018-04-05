@@ -433,4 +433,17 @@ class Position extends Bexio
         return $this->client->post("{$this->parentResource}/{$this->parentId}/kb_position_discount", $params);
     }
 
+    /**
+     * Delete the default position
+     * You first need to set the default resource kb_order|kb_invoice|kb_estimate
+     * Then the default parent with the id|object
+     *
+     * @param $id
+     * @return array
+     */
+    public function deleteDefaultPosition($id)
+    {
+        return $this->client->delete("{$this->parentResource}/{$this->parentId}/kb_position_custom/$id");
+    }
+
 }
